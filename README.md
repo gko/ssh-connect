@@ -1,5 +1,6 @@
 # ssh-connect
 🐙 simple ssh manager
+![demo](https://raw.githubusercontent.com/gko/ssh-connect/master/demo.gif)
 
 ## Installation
 ```bash
