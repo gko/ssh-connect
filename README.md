@@ -1,5 +1,5 @@
 # ssh-connect
-🐙 simple ssh manager
+🐙 simple ssh manager. It looks for your previous ssh sessions in `~/.bash_history` and keeps relevant the ones that you reconnect to.
 
 ![demo](https://raw.githubusercontent.com/gko/ssh-connect/master/demo.gif)
 
