@@ -3,7 +3,7 @@
 source $(dirname "${BASH_SOURCE[0]}")/listbox/listbox.sh
 
 ssh-history() {
-  cat ~/.bash_history | grep -E "^ssh\s" | sed -e 's/[[:space:]]*$//' | sort -u
+  cat ~/.bash_history | grep -E "^ssh\s" | sed -e 's/\s*$//' | sort | uniq -c | sort -nr | sed -e "s/^\s*[0-9]*\s//"
 }
 
 ssh-connect() {

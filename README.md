@@ -10,6 +10,10 @@ git clone --recursive https://github.com/gko/ssh-connect
 source ./ssh-connect/ssh-connect.sh
 ```
 
+## Like it?
+
+:star: this repo
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
