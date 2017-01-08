@@ -14,6 +14,6 @@ ssh-connect() {
   local hist=$(ssh-history | tr '\n' '|')
   res=$(bash -c ". $src && listbox -t \"Connect:\" -o \"$hist\" | tee /dev/tty | tail -n 1")
   echo ""
-  echo "$res" >> ~/.bash_history
+  echo "$res" >> "$HISTFILE"
   eval "$res"
 }
