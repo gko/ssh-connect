@@ -4,10 +4,21 @@
 ![demo](https://raw.githubusercontent.com/gko/ssh-connect/master/demo.gif)
 
 ## Installation
+
+### Manually
 ```bash
 git clone --recursive https://github.com/gko/ssh-connect
-# in your .bashrc
+```
+then in .bashrc or .zshrc:
+```bash
 source ./ssh-connect/ssh-connect.sh
+```
+
+### With [antigen](https://github.com/zsh-users/antigen)
+
+In your .zshrc
+```sh
+antigen bundle gko/ssh-connect
 ```
 
 ## Like it?
