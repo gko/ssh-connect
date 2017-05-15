@@ -11,13 +11,12 @@ fi
 source "$src"
 
 ssh-history() {
-  cat "$HISTFILE" | grep -E "^ssh\s" | sed -e 's/\s*$//' | sort | uniq -c | sort -nr | sed -e "s/^\s*[0-9]*\s//"
+  history 1 | awk '$2=="ssh" && $3!="" { $1=""; print }' | awk '$1=$1' | tail -r | uniq
 }
 
 ssh-connect() {
   local hist=$(ssh-history | tr '\n' '|')
   res=$(listbox -t "Connect:" -o "$hist" | tee /dev/tty | tail -n 1)
-  echo ""
-  echo "$res" >> "$HISTFILE"
-  eval "$res"
+  echo && echo $res >> "$HISTFILE"
+  eval $res
 }
