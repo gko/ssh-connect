@@ -21,6 +21,14 @@ In your .zshrc
 antigen bundle gko/ssh-connect
 ```
 
+### With [Fig](https://fig.io)
+
+Fig adds apps, shortcuts, and autocomplete to your existing terminal.
+
+Install `ssh-connect` in just one click.
+
+<a href="https://fig.io/plugins/other/ssh-connect_gko" target="_blank"><img src="https://fig.io/badges/install-with-fig.svg" /></a>
+
 ## Like it?
 
 :star: this repo
