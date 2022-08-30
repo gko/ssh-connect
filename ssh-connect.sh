@@ -11,7 +11,7 @@ fi
 source "$src"
 
 ssh-history() {
-  cat "$HISTFILE" | grep -E "^ssh\s" | sed -e 's/\s*$//' | sort | uniq -c | sort -nr | sed -e "s/^\s*[0-9]*\s//"
+  cat $HISTFILE | grep -E "(^|;)ssh\s[0-9A-Za-z]" | sed -e 's/\s*$//' | sed -e 's/:\s[0-9]*:[0-9]*;//' | sort | uniq -c | sort -nr | sed -e 's/^\s*[0-9]*\s//'
 }
 
 ssh-connect() {
